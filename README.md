@@ -106,7 +106,7 @@ The analysis compared **baselines, classical statistical models, and machine lea
 
 ---
 
-### 📊 Illustrative Figures  
+###  Illustrative Figures  
 
 The following figures (available in `/reports/figs/`) summarize the key results:  
 
