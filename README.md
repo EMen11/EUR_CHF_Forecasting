@@ -4,7 +4,7 @@
 The foreign exchange (FX) market is one of the most liquid and data-rich environments in finance. Among currency pairs, **EUR/CHF** is particularly relevant due to its economic and geopolitical importance in Europe and Switzerland.  
 This project investigates whether **short-term forecasting at horizon T+1 (one day ahead)** is feasible using both classical statistical approaches and modern machine learning techniques.  
 
-The work follows a full **end-to-end pipeline**: from data collection and cleaning, to baseline models, statistical benchmarks, and advanced ML implementations, with a focus on **reproducibility and financial interpretation**.
+The work follows a full **end-to-end pipeline**: from data collection and cleaning, to baseline models, statistical benchmarks, and advanced ML implementations, with a focus on  financial interpretation**.
 
 ---
 
