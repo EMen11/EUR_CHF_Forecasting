@@ -91,7 +91,7 @@ eur_chf_forecasting/
 
 The analysis compared **baselines, classical statistical models, and machine learning models** on the EUR/CHF daily log-returns (2015–2025).  
 
-### 🔹 Main findings  
+###  Main findings  
 - **Best overall models**:  
   - **SES (Simple Exponential Smoothing)** and **ARIMA(2,0,1)** achieved the lowest RMSE and MAE.  
   - Both are simple, robust, and highly competitive benchmarks.  
