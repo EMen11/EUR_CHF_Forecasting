@@ -56,9 +56,9 @@ eur_chf_forecasting/
 │   ├── processed/     # cleaned datasets, train/test splits, engineered features
 │
 ├── src/               # Python scripts (Part1.py … Part8.py)
-│   ├── utils/         # helper functions (data loading, evaluation, plotting)
+│   
 │
-├── notebooks/         # optional Jupyter notebooks for exploration/demo
+│
 │
 ├── results/
 │   ├── baseline/      # outputs from Naïve, MA, SES
@@ -147,22 +147,48 @@ Complex models add little value without exogenous variables.
 ## 6. Recommended Figures  
 
 The following figures are suggested to showcase the project results.  
-They are stored in `/reports/figs/` and can be included in presentations or dashboards:  
+They are stored in `/reports/figs/` and can be included in presentations or dashboards.  
 
-1. **EUR/CHF Exchange Rate (2015–2025)**  
-   - Historical time series used for modeling.  
+---
 
-2. **Histogram of Log-Returns**  
-   - Shows fat tails and strong skewness typical of FX returns.  
+### 1. EUR/CHF Exchange Rate (2015–2025)  
+![EUR/CHF Price](reports/figs/eur_chf_price.png)  
 
-3. **Leaderboard of Models (Test RMSE)**  
-   - Bar chart comparing SES, ARIMA, Ridge, Random Forest, XGBoost, etc.  
+This figure shows the historical EUR/CHF daily exchange rate from 2015 to 2025.  
+It highlights periods of volatility and long-term stability, providing the context for forecasting challenges.  
 
-4. **Forecast vs Actual (Top-3 Models)**  
-   - Overlay of SES, ARIMA, and Stacking predictions against real returns.  
+---
 
-5. **Residual Distributions**  
-   - Histograms confirming residuals are centered near zero, with fat tails remaining.  
+### 2. Histogram of Log-Returns  
+![Log-Returns Histogram](reports/figs/eur_chf_returns_hist.png)  
+
+The histogram of log-returns reveals a sharp peak around zero and heavy tails.  
+This confirms that FX returns are non-normal and subject to extreme movements, making predictions difficult.  
+
+---
+
+### 3. Leaderboard of Models (Test RMSE)  
+![RMSE Comparison](reports/figs/part7_rmse_comparison.png)  
+
+This bar chart compares the out-of-sample RMSE of different models.  
+It illustrates that advanced ML models (Random Forest, XGBoost, Stacking) outperform classical baselines like SES and ARIMA.  
+
+---
+
+### 4. Forecast vs Actual (Top-3 Models)  
+![Forecast vs Test](reports/figs/part7_top3_forecasts_vs_test.png)  
+
+This overlay shows predictions from the top-3 models compared to the actual EUR/CHF returns.  
+While short-term noise remains high, the models capture directional shifts and reduce overall forecast error.  
+
+---
+
+### 5. Residual Distributions  
+![Residual Distributions](reports/figs/part7_error_distributions.png)  
+
+These histograms display the residuals of the best models after forecasting.  
+They are centered around zero, but still show fat tails, underlining the inherent unpredictability of FX returns.  
+
 
 ---
 
