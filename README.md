@@ -173,26 +173,46 @@ They are centered around zero, but still show fat tails, underlining the inheren
 
 ---
 
+
 ## 7. Reproducibility  
 
-This repository is designed to ensure **full reproducibility**.  
-Anyone can replicate the results by following these steps:  
+This repository is designed to ensure **full reproducibility** of results.  
+Two options are available depending on whether you want an exact or lightweight setup.  
 
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/USERNAME/eur_chf_forecasting.git
-   cd eur_chf_forecasting
+---
 
-2. Create the Conda environment
+### 1. Clone the repository  
+```bash
+git clone https://github.com/EMen11/EUR_CHF_Forecasting.git
+cd EUR_CHF_Forecasting
+````
 
-Create the Conda environment
+---
+
+### 2. Set up the environment
+
+**Option A — Exact reproduction (Conda)**
+Recreates the full environment with all dependencies and versions.
+
+```bash
 conda env create -f environment.yml
 conda activate forecast
+```
 
+**Option B — Lightweight setup (Pip)**
+Installs only the core libraries needed to run the pipeline.
 
-3. Run the pipeline
-Execute the scripts sequentially to reproduce all results:
+```bash
+pip install -r requirements.txt
+```
 
+---
+
+### 3. Run the pipeline
+
+Execute the scripts sequentially to reproduce all datasets, metrics, and figures:
+
+```bash
 python src/Part1.py
 python src/Part2.py
 python src/Part3.py
@@ -201,15 +221,28 @@ python src/Part5.py
 python src/Part6.py
 python src/Part7.py
 python src/Part8.py
+```
 
+---
 
-4. Outputs
+### 4. Outputs
 
-All datasets and predictions are saved in /data/processed/ and /results/.
+* Processed datasets → `/data/processed/`
+* Model predictions & metrics → `/results/` (each chapter has its own folder + `figs/`)
+* Curated figures for presentation → `/reports/figs/`
+* Final consolidated report → `/reports/Report.pdf`
 
-Figures are exported to /reports/figs/.
+---
 
-A consolidated final report is available in /reports/Report.pdf.
+⚠️ **Note on reproducibility**
 
-With these steps, you can reproduce the same metrics, figures, and report as documented.
+* Use `environment.yml` for a guaranteed identical setup.
+* Use `requirements.txt` for a clean minimal install.
+* If you update dependencies, don’t forget to regenerate these files:
+
+```bash
+conda env export > environment.yml
+pip freeze > requirements.txt
+```
+
 
