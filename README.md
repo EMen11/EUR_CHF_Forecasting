@@ -104,26 +104,7 @@ The analysis compared **baselines, classical statistical models, and machine lea
 - **Conclusion**:  
   In noisy FX markets, **simplicity and robustness outperform complexity** unless enriched with **exogenous features** (macro variables, volatility indices, calendar effects).  
 
----
-
-###  Illustrative Figures  
-
-The following figures (available in `/reports/figs/`) summarize the key results:  
-
-1. **EUR/CHF Exchange Rate (2015–2025)**  
-   - Historical series used for modeling.  
-
-2. **Distribution of Log-Returns**  
-   - Heavy tails and skewness confirm challenges in forecasting.  
-
-3. **Leaderboard of Models (RMSE on Test Set 2023–2025)**  
-   - Bar chart ranking SES, ARIMA, Linear, RF, XGB, etc.  
-
-4. **Forecast vs Actual (Top-3 Models)**  
-   - Overlay showing SES, ARIMA, and Stacking predictions vs real returns.  
-
-5. **Residual Distributions**  
-   - Histograms showing residuals centered around zero with fat tails.  
+ 
 
 ---
 
