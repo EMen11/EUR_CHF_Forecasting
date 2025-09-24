@@ -49,6 +49,8 @@ The project follows a structured 9-part pipeline to ensure clarity and reproduci
 The repository is organized to ensure clarity, modularity, and reproducibility:  
 
 ```bash
+
+
 eur_chf_forecasting/
 │
 ├── data/
@@ -57,7 +59,6 @@ eur_chf_forecasting/
 │
 ├── src/               # Python scripts (Part1.py … Part8.py)
 │   
-│
 │
 │
 ├── results/
@@ -75,6 +76,10 @@ eur_chf_forecasting/
 ├── requirements.txt   # alternative (pip) dependencies
 ├── LICENSE            # license file (e.g., MIT)
 └── README.md          # project documentation (this file)
+
+
+
+
  ```
 
 
@@ -120,7 +125,7 @@ The analysis compared **baselines, classical statistical models, and machine lea
 | LightGBM     | 0.003569 | 0.002676 | +7.3% |
 | Stacking     | 0.003324 | 0.002506 | ≈0% |
 
- **SES and ARIMA remain the champions**, with Ridge and Stacking as close challengers.  
+ **SES and ARIMA remain the bests**, with Ridge and Stacking as close challengers.  
 Complex models add little value without exogenous variables.  
 
 ---
