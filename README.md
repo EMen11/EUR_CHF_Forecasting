@@ -239,7 +239,7 @@ python src/Part8.py
 
 ---
 
-⚠️ **Note on reproducibility**
+ **Note on reproducibility**
 
 * Use `environment.yml` for a guaranteed identical setup.
 * Use `requirements.txt` for a clean minimal install.
